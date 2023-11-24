@@ -1,0 +1,8 @@
+$p : red !important;
+$pCenter: center;
+
+p.MMM{
+    color: $p;
+    text-align: $pCenter;
+    background-color: alpha($color: #000000);
+}

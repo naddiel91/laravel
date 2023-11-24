@@ -1,0 +1,13 @@
+$divMainColor: blue !important;
+
+@mixin A($var1: yellow, $var2: blue, $var3: center){
+    color: $var1;
+    background-color: $var2;
+    text-align: $var3;
+    font-weight: bold
+}
+
+
+.MMM{
+    @include A();
+}

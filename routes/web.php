@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\View\Components\PageOne;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StoreController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,4 +44,9 @@ require __DIR__.'/auth.php';
 Route::middleware(['mymiddleware'])->prefix('pageone')->group(function(){
     Route::get('/success', [PageOne::class, 'success'])->name('success');
     Route::get('/number/{number?}', [PageOne::class, 'number'])->name('number');
+});
+
+Route::prefix('/store')->group(function(){
+    Route::get('/products', [StoreController::class, 'index'])->name('allproducts');
+    Route::get('/product/{id}', [StoreController::class, 'show'])->name('findFlavor');
 });

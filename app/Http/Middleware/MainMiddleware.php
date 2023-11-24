@@ -16,6 +16,6 @@ class MainMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {           
-        return auth()->id() === null ? redirect('login') : $next($request);
+        return auth()->id() === null ? response()->redirect('login') : $next($request);
     }
 }
