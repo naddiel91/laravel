@@ -22,7 +22,8 @@
                         <td>${{$item->price}}</td>
                         <td>{{$item->amount}}kg</td>
                     </tr>                
-                    @endforeach                
+                    @endforeach       
+                    {{  $store->links() }}         
                 </table>
             </div>
         </div>        

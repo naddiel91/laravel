@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Store;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class StoreController extends Controller
 {
@@ -13,7 +14,9 @@ class StoreController extends Controller
      */
     public function index()
     {
-        $store = Store::all();
+        // $store = DB::table('stores')->paginate(5);
+        $store = Store::paginate(5);
+                
         return view('fruits.store', ['store'=>$store]);
     }
 

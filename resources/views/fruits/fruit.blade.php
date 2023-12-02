@@ -9,7 +9,7 @@
         <div class="offset-2 col-8 text-center">
             <div class="col-4">
                 <figure>
-                    <img class="img" src="https://ik.imagekit.io/leravigxl/Oranges_-_whole-halved-segment.jpg?updatedAt=1700773819232" alt="" width="400" height="400">
+                    <img class="img" src="https://ik.imagekit.io/leravigxl/blueberries.jpg?updatedAt=1701528217470" alt="" width="400" height="400">
                 </figure>
             </div>      
             <div class="col-2">

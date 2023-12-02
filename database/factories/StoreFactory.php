@@ -17,7 +17,7 @@ class StoreFactory extends Factory
     public function definition(): array
     {
         return [
-            'flavor' => fake()->randomElement(['banana', 'mango', 'apple', 'strawberry', 'blackberry', 'pineapple', 'orange']),
+            'flavor' => fake()->unique()->randomElement(['banana', 'mango', 'apple', 'strawberry', 'blackberry', 'pineapple', 'orange']),
             'price' => fake()->randomDigit(2),
             'amount' => fake()->randomDigit(3),
         ];
