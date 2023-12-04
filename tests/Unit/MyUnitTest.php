@@ -10,7 +10,7 @@ class MyUnitTest extends TestCase
     /**
      * A basic unit test example.
      */
-    public function test_is_it_taxable_boolean_yes_or_no(): void
+    public function test_is_it_taxable_boolean_yes_or_no()
     {
         // $taxable = 
 

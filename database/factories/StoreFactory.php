@@ -20,6 +20,7 @@ class StoreFactory extends Factory
             'flavor' => fake()->unique()->randomElement(['banana', 'mango', 'apple', 'strawberry', 'blackberry', 'pineapple', 'orange']),
             'price' => fake()->randomDigit(2),
             'amount' => fake()->randomDigit(3),
+            'photo' => fake()->url(),
         ];
     }
 }

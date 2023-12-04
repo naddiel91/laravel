@@ -48,4 +48,5 @@ Route::middleware(['mymiddleware'])->prefix('pageone')->group(function(){
 Route::prefix('/store')->group(function(){
     Route::get('/products', [StoreController::class, 'index'])->name('allproducts');
     Route::get('/product/{id}', [StoreController::class, 'show'])->name('findFlavor');
+    Route::delete('/delete/{id}', [StoreController::class, 'destroy'])->name('deleteFlavor');
 });

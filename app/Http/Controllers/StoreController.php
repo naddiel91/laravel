@@ -70,6 +70,6 @@ class StoreController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        return response('trying to destroy something?');
     }
 }

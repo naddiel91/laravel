@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('flavor')->unique();
             $table->float('price');
             $table->float('amount');
+            $table->string('photo');
             $table->timestamps();
         });
     }
