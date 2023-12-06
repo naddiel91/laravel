@@ -16,6 +16,7 @@
                         <th class="col">Fruit</th>
                         <th class="col">Price</th>
                         <th class="col">Amount</th>
+                        <th></th>
                     </tr>            
                     @foreach ($store as $item)
                     <tr class="">
@@ -23,6 +24,7 @@
                         <td><a href="{{ route('findFlavor', ['id'=>$item->id]) }}">{{$item->flavor}}</a></td>
                         <td>${{$item->price}}</td>
                         <td>{{$item->amount}}kg</td>
+                        <td><a href="{{ route('deleteFlavor', ['id'=>$item->id]) }}">delete</a></td>
                     </tr>                
                     @endforeach       
                     {{  $store->links() }}         
