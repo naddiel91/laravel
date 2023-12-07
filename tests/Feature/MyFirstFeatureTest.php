@@ -42,7 +42,7 @@ class MyFirstFeatureTest extends TestCase
     public function test_authenticated_user_can_delete_items()
     {
         // Create a user and log them in
-        $user = User::find(1);
+        $user = User::fake()->create();
 
         // ddd($user);
 

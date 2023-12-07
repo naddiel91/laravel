@@ -7,6 +7,8 @@ use App\Models\Store;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+use function PHPUnit\Framework\returnSelf;
+
 class StoreController extends Controller
 {
     /**
@@ -62,7 +64,12 @@ class StoreController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $flavor = Store::fund($id);
+        if(!is_null($flavor )){
+
+        }
+        else
+            return redirect(route('allproducts'));
     }
 
     /**
@@ -70,6 +77,6 @@ class StoreController extends Controller
      */
     public function destroy(string $id)
     {
-        return response('trying to destroy something?');
+        return Store::destroy($id) ? view('default', ['slot' => "trying to destroy something?"]) : response("apologize, the record you are trying to destroy does not exist", 404);                
     }
 }
